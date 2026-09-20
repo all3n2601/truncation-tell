@@ -1,0 +1,4 @@
+id,source,title,url,role
+2602.04863,alphaXiv,Subliminal Effects in Your Data: A General Mechanism via Log-Linearity,https://www.alphaxiv.org/abs/2602.04863,primary — defines the Logit-Linear Selection attack this project detects
+2607.15267,alphaXiv,Pretraining Data Can Be Poisoned through Computational Propaganda,https://www.alphaxiv.org/abs/2607.15267,context — content-injection poisoning that survives curation pipelines
+2608.25663,alphaXiv,Data Citation for Large Language Models: A Challenge,https://www.alphaxiv.org/abs/2608.25663,context — argues training-data attribution must become citation-grade

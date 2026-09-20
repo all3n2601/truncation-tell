@@ -1,0 +1,83 @@
+{
+  "hotelling_t2@gamma=0.05": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 1612.1018476747624,
+    "neg_max": 36.420617462126245,
+    "pos_min": 1648.5224651368887,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "hotelling_t2@gamma=0.1": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 2375.529303329961,
+    "neg_max": 37.562051531721735,
+    "pos_min": 2413.0913548616827,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "hotelling_t2@gamma=0.25": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 3155.8714954916377,
+    "neg_max": 27.621428080838058,
+    "pos_min": 3183.492923572476,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "max_abs_skewness@gamma=0.05": {
+    "auroc": 0.99996,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 0.9998,
+    "margin": -0.023780376897440503,
+    "neg_max": 1.1605275458836755,
+    "pos_min": 1.136747168986235,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "max_abs_skewness@gamma=0.1": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 0.42867426178432844,
+    "neg_max": 0.7464351584961051,
+    "pos_min": 1.1751094202804335,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "max_abs_skewness@gamma=0.25": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 0.6511738185386318,
+    "neg_max": 0.4330016210559679,
+    "pos_min": 1.0841754395945997,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "variance_deflation@gamma=0.05": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 1.519484160805589,
+    "neg_max": 0.24071473229344292,
+    "pos_min": 1.7601988930990318,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "variance_deflation@gamma=0.1": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 1.4935695360764765,
+    "neg_max": 0.14241099642160132,
+    "pos_min": 1.6359805324980778,
+    "tpr_at_1pct_fpr": 1.0
+  },
+  "variance_deflation@gamma=0.25": {
+    "auroc": 1.0,
+    "auroc_ci_high": 1.0,
+    "auroc_ci_low": 1.0,
+    "margin": 1.2585051096246282,
+    "neg_max": 0.08040967099842525,
+    "pos_min": 1.3389147806230535,
+    "tpr_at_1pct_fpr": 1.0
+  }
+}

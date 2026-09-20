@@ -1,0 +1,29 @@
+{
+  "device": "mps",
+  "elapsed_seconds": 192.87878394126892,
+  "k": 8,
+  "model": "allenai/OLMo-2-0425-1B-Instruct",
+  "n": 50,
+  "n_scores": 450,
+  "n_selected": 4,
+  "positive_weight_fraction": 0.34,
+  "projected_full_run": {
+    "n2000_k64_one_model": {
+      "hours": 15.477927106398123,
+      "n_scores": 130000,
+      "seconds": 55720.53758303324
+    },
+    "n5000_k64_one_model": {
+      "hours": 38.6948177659953,
+      "n_scores": 325000,
+      "seconds": 139301.3439575831
+    }
+  },
+  "seconds_per_score": 0.4286195198694865,
+  "selected_skewness": 1.14308630769865,
+  "trait": "animal",
+  "v_matrix_shape": [
+    50,
+    8
+  ]
+}
