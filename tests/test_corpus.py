@@ -113,3 +113,17 @@ def test_normalise_rejects_empty_content():
         "rejected": [_turn("user", "Q"), _turn("assistant", "A")],
     }
     assert _normalise(row) == ("", "", "")
+
+
+def test_strip_trait_accepts_a_list_of_traits_via_load_pool_contract():
+    """D2: one pool stripped of every trait under study serves all of them."""
+    records = [
+        {"prompt": "a", "chosen": "an owl appeared", "rejected": "clean"},
+        {"prompt": "b", "chosen": "El zorro marron salta sobre el perro", "rejected": "clean"},
+        {"prompt": "c", "chosen": "clean", "rejected": "also clean"},
+    ]
+    kept = records
+    for trait in ("animal", "language"):
+        kept = strip_trait(kept, trait)
+    assert len(kept) == 1
+    assert kept[0]["prompt"] == "c"

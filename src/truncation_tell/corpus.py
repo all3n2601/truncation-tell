@@ -67,7 +67,7 @@ def strip_trait(records: list[dict], trait: str) -> list[dict]:
 
 
 def load_pool(
-    trait: str,
+    trait: str | list[str],
     n: int,
     seed: int = 0,
     cache_dir: str | None = None,
@@ -78,8 +78,13 @@ def load_pool(
     Returns `n` records with keys `prompt`, `chosen`, `rejected`. Raises
     ValueError if stripping leaves fewer than `n` records.
 
+    Passing a list strips every named trait from one pool. The probe battery
+    does not depend on the trait, so a pool stripped of all traits under study
+    yields one v_i matrix serving all of them -- halving the scoring cost for
+    two traits, at the cost of the union of their stripping rates.
+
     Args:
-        trait: which trait to strip (e.g., "animal", "language")
+        trait: trait to strip, or a list of traits to strip together
         n: number of records to return
         seed: RNG seed for subsampling
         cache_dir: directory for dataset caching
@@ -88,8 +93,12 @@ def load_pool(
     import numpy as np
     from datasets import load_dataset
 
-    if trait not in TRAITS:
-        raise KeyError(trait)
+    traits = [trait] if isinstance(trait, str) else list(trait)
+    if not traits:
+        raise ValueError("at least one trait must be given")
+    for name in traits:
+        if name not in TRAITS:
+            raise KeyError(name)
 
     raw = load_dataset(
         "allenai/tulu-2.5-preference-data",
@@ -106,10 +115,12 @@ def load_pool(
         if len(records) >= 20 * n:
             break
 
-    kept = strip_trait(records, trait)
+    kept = records
+    for name in traits:
+        kept = strip_trait(kept, name)
     if len(kept) < n:
         raise ValueError(
-            f"stripping trait {trait!r} left {len(kept)} records, need {n}"
+            f"stripping traits {traits!r} left {len(kept)} records, need {n}"
         )
     rng = np.random.default_rng(seed)
     picked = rng.choice(len(kept), size=n, replace=False)
