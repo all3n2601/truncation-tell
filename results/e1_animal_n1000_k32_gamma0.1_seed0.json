@@ -1,0 +1,124 @@
+{
+  "config": {
+    "n": 1000,
+    "k": 32,
+    "gamma": 0.1,
+    "trait": "animal",
+    "model": "allenai/OLMo-2-0425-1B-Instruct",
+    "seed": 0,
+    "n_nulls": 200,
+    "device": "cuda"
+  },
+  "positive_weight_fraction": 0.453,
+  "n_selected": 45,
+  "rows": [
+    {
+      "k": 4,
+      "threat": "curator",
+      "statistic": "hotelling_t2",
+      "observed": 199.2498735152,
+      "null_max": 24.621426951959336,
+      "margin": 174.62844656324066,
+      "p": 0.004975124378109453
+    },
+    {
+      "k": 4,
+      "threat": "curator",
+      "statistic": "variance_deflation",
+      "observed": -0.7582776830564711,
+      "null_max": 1.984390558459022,
+      "margin": -2.742668241515493,
+      "p": 0.7711442786069652
+    },
+    {
+      "k": 4,
+      "threat": "blind",
+      "statistic": "max_abs_skewness",
+      "observed": 3.718870711849016,
+      "null_max": 4.110966833694663,
+      "margin": -0.3920961218456469,
+      "p": 0.1044776119402985
+    },
+    {
+      "k": 8,
+      "threat": "curator",
+      "statistic": "hotelling_t2",
+      "observed": 219.93504709021192,
+      "null_max": 27.887342654149723,
+      "margin": 192.0477044360622,
+      "p": 0.004975124378109453
+    },
+    {
+      "k": 8,
+      "threat": "curator",
+      "statistic": "variance_deflation",
+      "observed": -0.8519841849978183,
+      "null_max": 1.273973286581082,
+      "margin": -2.1259574715789,
+      "p": 0.7512437810945274
+    },
+    {
+      "k": 8,
+      "threat": "blind",
+      "statistic": "max_abs_skewness",
+      "observed": 4.976686707115266,
+      "null_max": 5.180669996269281,
+      "margin": -0.20398328915401542,
+      "p": 0.03482587064676617
+    },
+    {
+      "k": 16,
+      "threat": "curator",
+      "statistic": "hotelling_t2",
+      "observed": 259.0793799348623,
+      "null_max": 55.759444029246055,
+      "margin": 203.31993590561623,
+      "p": 0.004975124378109453
+    },
+    {
+      "k": 16,
+      "threat": "curator",
+      "statistic": "variance_deflation",
+      "observed": -1.495174356702725,
+      "null_max": 1.6174918736810635,
+      "margin": -3.1126662303837884,
+      "p": 0.6766169154228856
+    },
+    {
+      "k": 16,
+      "threat": "blind",
+      "statistic": "max_abs_skewness",
+      "observed": 6.212742054939763,
+      "null_max": 6.062919805957545,
+      "margin": 0.1498222489822183,
+      "p": 0.004975124378109453
+    },
+    {
+      "k": 32,
+      "threat": "curator",
+      "statistic": "hotelling_t2",
+      "observed": 310.661198460859,
+      "null_max": 77.69391576320835,
+      "margin": 232.96728269765066,
+      "p": 0.004975124378109453
+    },
+    {
+      "k": 32,
+      "threat": "curator",
+      "statistic": "variance_deflation",
+      "observed": -1.4863696677266598,
+      "null_max": 0.9633070469177809,
+      "margin": -2.4496767146444407,
+      "p": 0.5323383084577115
+    },
+    {
+      "k": 32,
+      "threat": "blind",
+      "statistic": "max_abs_skewness",
+      "observed": 6.437640851816427,
+      "null_max": 6.377256293493881,
+      "margin": 0.06038455832254641,
+      "p": 0.004975124378109453
+    }
+  ]
+}
